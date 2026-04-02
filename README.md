@@ -46,9 +46,10 @@ python generate_data.py
 6. **连接运动 (Link Motion)**: 分类模型。
 
 ## 📦 部署说明 (C++ Integration)
-1. **模型导出**: 训练脚本会生成 `.bin` (Treelite) 或 `.txt` (LGBM) 文件。
-2. **C++ 调用**: 推荐使用 Treelite C API 或 LightGBM C++ API 加载模型。
-3. **预处理**: C++ 端需读取 `metadata_dictionary.json`，确保输入特征的编码与训练时完全一致。
+1. **依赖库**: 部署在 C++ 端所需的 Treelite 库已包含在 `deps/treelite-4.7.0.rar` 中。请解压该文件并按照库的文档进行配置。
+2. **模型导出**: 训练脚本会生成 `.bin` (Treelite) 或 `.txt` (LGBM) 文件。
+3. **C++ 调用**: 推荐使用 Treelite C API 或 LightGBM C++ API 加载模型。
+4. **预处理**: C++ 端需读取 `metadata_dictionary.json`，确保输入特征的编码与训练时完全一致。
 
 ---
 *本项目由 Gemini CLI 协助构建与维护。*
